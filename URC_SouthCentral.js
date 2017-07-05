@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            WME URComments USA_SouthCentral
 // @description     This script is for South Central editors for standard comments to be used with the script URComments
-// @namespace       URCSouthCentral
+// @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
 // @version         0.0.1
