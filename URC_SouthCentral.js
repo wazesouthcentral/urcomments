@@ -4,7 +4,7 @@
 // @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
-// @version         0.0.4
+// @version         0.0.5
 // @include         /^https:\/\/(www|beta)\.waze\.com\/(?!user\/)(.{2,6}\/)?editor\/.*$/
 // @author          Original script created by Rick Zabel '2014, Modified for use in SCR by Travis Turner
 // @license         MIT/BSD/X11
@@ -178,7 +178,7 @@ window.UrcommentsUSA_SouthCentralURC_Text_tooltip[40] = "Auto send reminders to 
 window.UrcommentsUSA_SouthCentralURC_Text[41] = "Replace tag name with editor name";
 window.UrcommentsUSA_SouthCentralURC_Text_tooltip[41] = "When a UR has the logged in editors name in the description or any of the comments of the UR (not the name Waze automatically add when commenting) replace the tag type with the editors name";
 
-window.UrcommentsUSA_SouthCentralURC_Text[42] = "(Double Click)"; //double click to close links
+window.UrcommentsUSA_SouthCentralURC_Text[42] = "(++)"; //double click to close links
 window.UrcommentsUSA_SouthCentralURC_Text_tooltip[42] = "Double click here to auto send - ";
 
 window.UrcommentsUSA_SouthCentralURC_Text[43] = "Dont show tag name on pill";
@@ -239,21 +239,21 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "The problem was unclear and volunteers didn't receive a response, so we are closing this report. As you travel, please feel welcome to report any map issues you encounter. Thanks!",//GizmoGuy, t0cableguy, rickzabel 1/14/2015
     "NotIdentified",
 
-    "No further communication (fixed)",
+    "No further communication (f)",
     "No further information was received.  Based on the resources available, we have made edits in the vicinity of this report that may fix your issue.  As you travel, please feel welcome to report any map issues you encounter. Thanks!",
     "Solved", 
 
-    "No further communication (not identified)",
+    "No further communication (ni)",
     //"No further communication was received. This request will now be closed. As you travel, please feel welcome to report any map issues you encounter. Thanks!",  //rickzabel 12/7/14, karlcr9911 12/7/14 t0cableguy 12/8/14 // one sentence? rickzabel 12/7/14
     //"No further communication was received. This request will now be closed. As you travel, please feel welcome to report any map issues you encounter. Thanks!",
     "No further information was received and the request is being closed.  As you travel, please feel welcome to report any map issues you encounter. Thanks!", //t0cableguy 12/8/14 //rickzabel 12/8/14 , karlcr9911 12/8/14
     "NotIdentified", // same comment different action based off UR status rickzabel 12/7/14, karlcr9911 12/7/14 // one sentence? rickzabel 12/7/14 t0cableguy 12/8/14
 
-    "Thanks for the reply (fixed)",
+    "Thanks for the reply (f)",
     "Thank you for the reply! This request will be closed. As you travel, please feel welcome to report any map issues you encounter.",
     "Solved", //rickzabel 12/27/14
 
-    "Thanks for the reply (not-identified)",
+    "Thanks for the reply (ni)",
     "Thank you for the reply! This request will be closed. As you travel, please feel welcome to report any map issues you encounter.",
     "NotIdentified", //rickzabel 12/27/14
 
@@ -688,6 +688,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "We made some changes to the map, please allow up to 48 hours for the changes to be reflected on the live map.", //rickzabel 12/7/14 //t0cableguy 12/8/14, karlcr9911 12/8/14
     "Open",
 
+    "Construction Zones (non-closure)",
+    "If the roads are just slow but not closed, unfortunately there's nothing we can do; we have to rely on Waze's real-time traffic-speed monitoring to identify the best route, and depending on how many Wazers have been that way, Waze may simply not know about the problems yet. Now, if the roads are completely closed, then our best approach depends on whether they are short-term or long-term closures. To report short-term closures please use the Report -> Closure feature in the app, as that takes effect immediately. On the other hand, Report -> Map Issue (what you used here) can take quite some time and only makes sense for long-term closures. Is there a long-term closure you'd like us to implement? If so, please provide details and we'd be glad to look into it! Otherwise we'll close this report in a few days. Thank you!",
+    "NotIdentified",
+
     "Duplicated URs - Gaming System",
     "Volunteer responding. Based on this report's timestamp, location, and other data, it appears to be a duplicate of one or more other reports submitted nearby. A single report is usually sufficient, so we will close this as an accidental resubmission. No worries! However, please be aware that sending multiple reports for the same map issue over a short time taxes the volunteer map editors and prevents them from helping other reporters. Sending multiple, identical reports of any kind may be considered gaming, and can result in loss of reporting privileges.",
     "NotIdentified",
@@ -724,10 +728,6 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Still Researching/Trying Update",
     "We are still working on fixing the issue you have reported. Keeping this report open.",
     "Open",
-
-    "Construction Zones (non-closure)",
-    "If the roads are just slow but not closed, unfortunately there's nothing we can do; we have to rely on Waze's real-time traffic-speed monitoring to identify the best route, and depending on how many Wazers have been that way, Waze may simply not know about the problems yet. Now, if the roads are completely closed, then our best approach depends on whether they are short-term or long-term closures. To report short-term closures please use the Report -> Closure feature in the app, as that takes effect immediately. On the other hand, Report -> Map Issue (what you used here) can take quite some time and only makes sense for long-term closures. Is there a long-term closure you'd like us to implement? If so, please provide details and we'd be glad to look into it! Otherwise we'll close this report in a few days. Thank you!",
-    "NotIdentified",
 
     //"Blank Screen.",
     //"Please follow these instructions in the app. Tap the Wazer icon > Settings > Advanced > Data transfer > Refresh map of my area. Second you can try clearing Waze's app cache in your phone’s app manager. The final option is  to Uninstall and Reinstall the app.",
