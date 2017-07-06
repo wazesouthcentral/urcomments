@@ -4,7 +4,7 @@
 // @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
-// @version         0.0.2
+// @version         0.0.3
 // @include         /^https:\/\/(www|beta)\.waze\.com\/(?!user\/)(.{2,6}\/)?editor\/.*$/
 // @author          Original script created by Rick Zabel '2014, Modified for use in SCR by Travis Turner
 // @license         MIT/BSD/X11
@@ -282,6 +282,14 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Volunteer responding - Thank you for your report. The road has been re-opened.",  
     "Solved", 
 
+    "Closure - Issues Reopening",
+    "We have been working to keep up with the closures and reopenings. Due to some technical difficulties, we were having issues reopening some closed roads. Please bear with us, and thank you for your report. ",
+    "Solved",     
+
+    "Closure - Occasional Event",
+    "Volunteer responding. Authorities briefly close roads in this area during occasional events. These events do not repeat on a daily or weekly schedule, so each one would need to be programmed manually into Waze.  You can use the Report->Closure feature in the app. It takes effect immediately, and the more people use it, the greater confidence Waze assigns the closure. This will work much better than submitting a \"Map Issue\" report like this one, since Map-Issue reports depend completely on volunteers for processing and can take some time.",
+    "NotIdentified",
+
     "Closure - Request for Information",
     //"Would you please let us know the following; What road is closed?; between which intersections is this road closed; Do you know how long this road is scheduled to be closed? Thanks!", //karlcr9911
     "Volunteer responding - Would you please let us know the following; What road is closed?; between which intersections is this road closed; Do you know how long this road is scheduled to be closed? Thanks!", //rickzabel 12/9/14
@@ -298,11 +306,11 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "Closure - Temporary - Request More Info",
     //"How long is the road going to be closed? For closures of only a few days, we volunteer map editors can't be much help. It takes at least that long for our edits to make it to devices! When you encounter short-term road closures in the future, please use the Report->Closure feature in the Waze app. If this is a long-term closure please respond and let us know as much as you can. Thanks!",
-    "Volunteer responding - Do you know how long the road is going to be closed?  Also, when you encounter short-term road closures in the future, please use the Report > Closure feature built into the Waze app. If this is a long-term closure please respond and let us know as much as you can. Thanks!", // reworded - rickzabel 12/7/2014, karlcr9911 12/8/14
+    "Volunteer responding.  Do you know how long the road is going to be closed?  Also, when you encounter short-term road closures in the future, please use the Report > Closure feature built into the Waze app. If this is a long-term closure please respond and let us know as much as you can. Thanks!", // reworded - rickzabel 12/7/2014, karlcr9911 12/8/14
     "Open",
 
-    "Closure - Occasional Event",
-    "Volunteer responding. Authorities briefly close roads in this area during occasional events. These events do not repeat on a daily or weekly schedule, so each one would need to be programmed manually into Waze.  You can use the Report->Closure feature in the app. It takes effect immediately, and the more people use it, the greater confidence Waze assigns the closure. This will work much better than submitting a \"Map Issue\" report like this one, since Map-Issue reports depend completely on volunteers for processing and can take some time.",
+    "Closure - Server Problems",
+    "Volunteer responding. There have been problems with road closures due a server problem. Road closures keep reappearing in this area. We are doing our best to keep things up-to-date, based on best available data from various agencies. \n\nStay safe and have the best of all possible days.", 
     "NotIdentified",
 
 // Speed Limits --------------------------------------------------------
@@ -330,6 +338,14 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Volunteer Responding.  Can you provide us details on where the new speed limit begins?",
     "Open",
 
+    "Speed Limit - School Zone",
+    "Volunteer editor responding, Waze does not currently have a way to handle 'limited hour' speed limits. School zone areas will display the off hours limit.",
+    "Open",
+
+    "Speed Limit - Suggest WURM",
+    "Volunteer editor responding, thank you for posting this speed limit update. Let me suggest using the Waze Update Request Marker ‘app’ to make it easier for us volunteer editors to find and fix these in the future: \n\nhttps://profundos.org/waze/wurm/ \n\n It lets you report the speed with a single touch. \nWas your report close to where the speed limit changes? That is what we really need to know.",
+    "Open",
+
     "Speed Limit - Temporary Construction",
     "Volunteer Responding.  The speed limit you have provided is for a ongoing construction zone.  Can you let us know how long the construction is estimated to last for?",
     "Open",
@@ -337,6 +353,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Speed Limit - Variable",
     "Volunteer Responding. Currently Waze does not support Variable Speed Limits (VSLs). Since we cannot enter in speed limits real time, the highest possible speed limit is displayed in Waze. If you would like to see speed limits at all times while using the app, please go to Settings > Speedometer > Show speed limit. Thank You.",
     "Solved",    
+
+    "Speed Limit - Verify Type",
+    "Volunteer responding. Waze currently only maps day-time/full-time automobile regulatory speed limits (black on white signs). We do not assign school zones, truck limits, night limits, advisory limits, private roads, or parking lots. Is the limit you reported a permanent regulatory limit?",
+    "Open", 
 
     "Speed Limit", //23
     "Waze did not send us enough information to fix your request. Would you please tell us as much as possible about the speed limit? Thanks!",
@@ -371,6 +391,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //"Volunteer responding -  Would you let us know the address that is missing? The live map does not have all the street numbers. You can also use the Report Places feature in Waze to mark the location. It is helpful that after taking a picture that you move near the location you’re marking to save the place. Also, please do not submit pictures containing faces, license plates, or personal details. Thanks!", //rickzabel 12/9/14 
     //"Volunteer responding -  Would you let us know the address that is missing? The live map does not have all the street numbers. You can also use the Report Places feature in Waze to mark the location. It is helpful that after taking a picture that you move near the location you’re marking to save the place. Please do not submit pictures containing faces, license plates, or personal details. Thanks!", //rickzabel 2/26/15 
     "Volunteer responding - Would you let us know the address that is missing? The available resources do not have the address available for your location. You can use the Report > Places feature in Waze to mark the location. Before you save move close as possible to the entrance. Do not submit pictures containing faces, license plates, or personal details. Thanks!", //rickzabel 4/5/2015 //t0cableguy 4/5/2015
+    "Open",
+
+    "Places - Address - Need Exact",
+    "We need to know your exact target in order to determine why this happened and what needs to be done to fix this. Waze ALWAYS routes to a physical location via the 'nearest currently mapped drivable surface'. \nSometime the target location is the problem and must be changed. Often the target comes from some other database such as Google Maps. Sometime the mapping of drivable surfaces must be changed. \nTo protect drivers privacy, we are never given your identity, origin or destination. \nWe don't see what you see on your screen. We only know your physical location at the moment you start the report, not your location when you finish typing stuff and hit send. \nIf you report a problem at a distant location, it may be hard for us to find and outside our edit area. \nI hope this makes it easier for you to understand why we ask questions.",
     "Open",
 
     "Places - Area Entrances",
@@ -434,20 +458,11 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Volunteer responding - We reviewed the issue and did not find any map errors. It looks like Waze provided you with a valid route. Try the Waze suggested route a few times, as it may turn out to actually be faster. If not you'll be teaching Waze that that route is slower, and the faster route will become preferred.",  //GizmoGuy, t0cableguy, rickzabel 1/14/2015
     "NotIdentified",
 
-    "Routing - Valid Left turns",
-    //"Volunteer responding - If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, you wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //rz 2/26/15 
-    "Volunteer responding - If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, your wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //karlcr9911 4/4/15 //rickzabel 4/5/15
-    "NotIdentified",
 
-    "Routing - Valid Left turns 2",
-    //"Volunteer responding – We do not disable legal turns only because they are difficult. If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, you wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //rz 2/26/15
-    "Volunteer responding – We cannot disable legal turns only because they are difficult. If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, your wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //karlcr9911 4/4/15 //rickzabel 4/5/15
-    "NotIdentified",
-
-    "Routing - Valid but Difficult Route",
+    //"Routing - Valid but Difficult Route",    // Yes, we can do difficult routes now. (turnertr 7/6/17)
     //"Volunteer responding – We do not disable legal routes only because they are difficult. If you wait and complete the route, it may actually be faster than the alternative. If it’s not faster, you wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting the route. We also suggest if you do not feel comfortable, you can always go another route and let Waze recalculate."', //rz 2/26/15
-    "Volunteer responding – We cannot disable legal routes only because they are difficult. If you wait and complete the route, it may actually be faster than the alternative. If it’s not faster, your wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting the route. We also suggest if you do not feel comfortable, you can always go another route and let Waze recalculate.", //karlcr9911 4/4/15 //rickzabel 4/5/15
-    "NotIdentified",
+    //"Volunteer responding – We cannot disable legal routes only because they are difficult. If you wait and complete the route, it may actually be faster than the alternative. If it’s not faster, your wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting the route. We also suggest if you do not feel comfortable, you can always go another route and let Waze recalculate.", //karlcr9911 4/4/15 //rickzabel 4/5/15
+    //"NotIdentified",
 
     "Routing - U-turns",
     //"Volunteer responding - Currently Waze will not tell you to make a \"U-turn\". It will route you in several left/right turns to effectively create a U-turn. This is a programming issue that cannot be changed by the volunteer map editors, but we understand that Waze is working on a fix. Thanks!",//rickzabel Pesach 12/22/14
@@ -458,6 +473,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //"It appears that you ended up going the route Waze suggested, what was the problem you were having? Would you tell us your destination as you entered it into Waze? Thanks!",
     //"It appears that you followed the Waze-suggested route. What problem did you encounter here? Would you tell us your destination as you entered it into Waze? Thanks!",  //karlcr9911 12/7/2014
     "Volunteer responding - It appears that you followed the route Waze suggested. Would you please let us know what went wrong with the route Waze gave you? Would you tell us your destination as you entered it into Waze? Thanks!", //reworded rickzabel 12/7/2014
+    "Open",
+
+    "HOV - Information Collection",
+    "Volunteer map editor here, Waze is collecting information on cases such as this one. Please open this form and file a report: http://j.mp/HOVproject \n Thanks!",
     "Open",
 
     "HOV - Not Using HOV",
@@ -479,6 +498,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Volunteer responding - While Waze attempts to route you to your destination efficiently, it does not know if you have a toll transponder.  We are very sorry to say that the volunteer map editors cannot be much help here. As you travel, please feel welcome to report any map issues you encounter. Thanks!", //rickzabel karlcr9911 4/18/2015
     "NotIdentified",
 
+    "Tolls - Not Avoiding",
+    "Volunteer responding.  Waze won't take a 'long' detour to avoid a toll. which could be what happened to you. \nFor some more info see https://www.waze.com/forum/viewtopic.php?f=6&t=71405 \nIf this is a route you take often, you could select a segment on the road you want to route over to avoid the toll and add it as a favorite ( http://wiki.waze.com/wiki/Manage_Favorites ), then add it as a stop when you are navigating ( http://wiki.waze.com/wiki/How_to_Naviga ... stop_point ). \nThis will force a detour to your stop point and bypass the toll road.",
+    "Open",//recommended by Pesach in SM hangout 02/21/16
+
     "Tolls - Toll Booth Not Mapped",
     // We get UR's in Oklahoma quite a bit that just state \"toll booth\".
     "Volunteer responding - Typically, we do not have toll booths marked on the map.  This route is however marked as a toll road.  If you wish to avoid tolls, there is an option under Settings > Navigation or after clicking GO tap Routes and select one without the toll icon. Thanks!", //turnertr 7/5/17
@@ -496,15 +519,33 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "To report a traffic jams please use the Waze app by clicking the pin in the lower right and then clicking Traffic Jam. Traffic Jam reports can help route you and other Wazers around traffic problems in real-time. Thanks!", // reworded - rickzabel 12/7/2014, karlcr9911 12/8/14
     "NotIdentified",
 
+    "Turn Restrictions - Already included",
+    "This restriction is already included in the map, Waze should not route through this illegal turn. If Waze ever gives you a route through a restricted turn, please send another Map Issue report at that time. Thanks!",
+    "NotIdentified",  //rickzabel Pesach 12/27/14
+
+    "Turn Restrictions - Double Yellow",
+    "Volunteer responding, It is legal to make a left turn across one double yellow line. \nTwo double yellow lines, spaced apart 2 feet or more, are considered a barrier. It is illegal to cross. Thanks!", //rz 2/26/15 //karlcr9911 4/4/15
+    "NotIdentified",
+
+    "Turn Restrictions - Electronic sign",
+    "Unfortunately, since this electronic turn restriction is illuminated at random times, there is no way for Waze to know when it's not proper to turn here. Please follow all posted signs and once you bypass the suggested turn, Waze will recalculate your route. Thank you!",
+    "NotIdentified",
+
+    "Turn Restrictions - Valid Left turns",
+    //"Volunteer responding - If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, you wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //rz 2/26/15 
+    "Volunteer responding - If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, your wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //karlcr9911 4/4/15 //rickzabel 4/5/15
+    "NotIdentified",
+
+    "Turn Restrictions - Valid Left turns 2",
+    //"Volunteer responding – We do not disable legal turns only because they are difficult. If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, you wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //rz 2/26/15
+    "Volunteer responding – We cannot disable legal turns only because they are difficult. If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, your wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //karlcr9911 4/4/15 //rickzabel 4/5/15
+    "NotIdentified",
+
     "<br>",
     "",
     "Open",
 
-    "Already included restrictions",
-    "This restriction is already included in the map, Waze should not route through this illegal turn. If Waze ever gives you a route through a restricted turn, please send another Map Issue report at that time. Thanks!",
-    "NotIdentified",  //rickzabel Pesach 12/27/14
-
-    "Camera report",
+   "Camera report",
     //"Thanks for the report. To ensure proper placement, Cameras must be reported in the app.  REPORT > CAMERA (may have to scroll down for it) > SPEED/Red LIGHT > Submit”, //subs5 4/17/2015
     //"Thanks for the report. To ensure proper placement, Cameras must be reported in the app. REPORT > (scroll to) CAMERA > SPEED / Red LIGHT / Fake  > Send”, //GizmoGuy411 2015-04-17
     "Volunteer responding, cameras must be reported from the app at / near the actual location using the Report > Camera option. Thank you!", //karlcr9911 rickzabel 4/17/2015
@@ -519,16 +560,28 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "Editor Recruitment to Slack",
     "Thank you for helping us make the map better!  If you'd like to join in on map editing, we invite you to join our regional communication platform, Slack, by filling out a simple form.  The form is located at http://bit.ly/2i3Yuij, once it is completed, you'll receive an invite via e-mail to join the Slack platform.",
-    "",
+    "Open",
 
     "Errors with no text",
     //"Waze did not send us enough information to fix your request. Would you please let us know what went wrong with the route Waze gave you? Would you tell us your destination as you entered it into Waze? Thanks!",  //karlcr9911 12/7/14 //rickzabel 12/7/14 //t0cableguy 12/7/14
     "Volunteer responding - Waze did not send us enough information to fix your request. Would you please let us know what went wrong with the route Waze gave you? Would you tell us your destination as you entered it into Waze? Thanks!", //rickzabel 12/8/14
     "Open",
 
+    "Map issue hazard",
+    "Thanks for reporting. Do you know if it is still closed? Waze has 'hazard reports', and 'Road closure reports' those are both sent immediately to other drivers. Waze also has 'map issues', like this report. Those must be acted upon by volunteer editors, like me. It can take days or weeks for 'Map Issues' to be acted upon. In the case of a temporary closure, it is often better to make a hazard report. If the closure will be long term, both may be appropriate along with an explanation of the reason for the closure and and an estimate for how long the problem will last.",
+    "Open",
+
+    "Not at this location",
+    "The problem you are reporting doesn't appear to be located near the location where you started your report. Volunteer map editors have limited editing areas.\nWhen a report is filed from a location that is not near the problem, the problem may be outside their editing area.\nPlease make sure to start reports near the location of the problem.",
+    "Open",    
+
     "Overall Waze complaint",
     "Volunteer responding - You can help make Waze better by reporting problems as you find them. Please include as many details as possible? Thanks!",
     "NotIdentified", //rickzabel Pesach 12/22/14
+
+    "Tag [NOTE] for Editor",
+    "[NOTE] an anonymous editor appears to have posted a UR saying \"$URD\". \nTO that editor: Please do whatever you wanted done and close this report.",
+    "Open",   
 
     "<br>",
     "",
@@ -635,6 +688,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "We made some changes to the map, please allow up to 48 hours for the changes to be reflected on the live map.", //rickzabel 12/7/14 //t0cableguy 12/8/14, karlcr9911 12/8/14
     "Open",
 
+    "Duplicated URs - Gaming System",
+    "Volunteer responding. Based on this report's timestamp, location, and other data, it appears to be a duplicate of one or more other reports submitted nearby. A single report is usually sufficient, so we will close this as an accidental resubmission. No worries! However, please be aware that sending multiple reports for the same map issue over a short time taxes the volunteer map editors and prevents them from helping other reporters. Sending multiple, identical reports of any kind may be considered gaming, and can result in loss of reporting privileges.",
+    "NotIdentified",
+
     "Missing Bridges or Roads",
     //"The roads here have been pretty thoroughly mapped and we volunteers can't see anything missing that should ordinarily be there. Waze probably simply chose not to show you the feature in question. When moving at highway speeds, Waze deliberately chooses not to display some nearby features to avoid cluttering the screen. If you are certain a feature is missing from the map, please reply and tell us as much as possible about it. Thanks!",
     //"The roads for this area are thoroughly mapped and the volunteer editors can not find anything missing from the map. When you are moving, Waze deliberately chooses not to display some nearby features to avoid cluttering the screen. If you are certain a feature is missing from the map, please reply and tell us as much as possible about it. Thanks!", //reworded rickzabel 12/7/14  //karlcr9911 12/8/14
@@ -649,6 +706,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Please try doing these options. Tap the Search Icon > Settings gear icon > Display & Map > Data Transfer > Refresh map of my area. Secondly, you can try clearing Waze's app cache in your phone’s app manager. The final option is to reset the app by going to the navigation screen and type ##@resetapp in search field and hit search.", // rickzabel 11/24/16
     "Open",
 
+    "No hablo muy bien el Español",
+    "Lo siento, estamos voluntarios solamente para mantener las mapas. No hablamos muy bien el Español y no podemos ayudar con el aplicación.\n(Regrets, we are volunteers only for maintaining the maps. We don't speak Spanish well and we can't help with the application.)",
+    "Open",
+
     "Pave Road",
     //"Please use the pave function in the app to show us the path of the missing road. You can do this by tapping the bottom right Pin icon, then Map Issue, and selecting the Pave Road tab. Once you leave any mapped roads you can tap start paving. Please be sure to tap the steamroller and tap stop paving before driving back onto any roads that are mapped. If paving a parking lot, please only drive the main roads and perimeters, not each aisle and space. Thanks for your contribution to the map! Thanks!", //requested by t0cableguy
     //"Please use the pave function in the app to show us the path of the missing road. You can do this by tapping the bottom right Pin icon, then Map Issue, and selecting the Pave Road tab. Once you leave any mapped roads you can tapp paving. Please be sure to tap the steamroller and tap stop paving before driving back onto any roads that are mapped. If paving a parking lot please only drive the main roads and perimeters, not each aisle and space. Thanks for your contribution to the map! Thanks!",//rickzabel
@@ -658,6 +719,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //"Volunteer responding - You can pave the road from the app by tapping the Pin icon > Map Issue > Pave Road tab. After leaving the paved road tap start paving. Once done tap the steamroller > stop paving. You can provide information about the new road such as it's name buy tapping on the Pin icon > Map Issue > Missing Road, and Thanks!", //rickzabel 12/8/14 t0cableguy 12/8/14
     //"Volunteer responding - You can pave the road from the app by tapping the Pin icon > Map Issue > Pave Road tab. After leaving the paved road tap start paving. Once done tap the steamroller > stop paving. You can provide information about the new road such as it's name by tapping on the Pin icon > Map Issue > Missing Road, and Thanks!", //rickzabel 2/26/15
     "Volunteer responding - You can pave the road from the app by tapping the Pin icon > Map Issue > Pave Road tab. After leaving the paved road, tap Start paving. Once done, tap the Steamroller > Stop paving. You can provide information about the new road such as its name by tapping on the Pin icon > Map Issue > Missing Road. Thanks!", //karlcr9911 4/5/15 //rickzabel 4/5/15 removed single quotes
+    "Open",
+
+    "Still Researching/Trying Update",
+    "We are still working on fixing the issue you have reported. Keeping this report open.",
     "Open",
 
     "Construction Zones (non-closure)",
@@ -687,13 +752,25 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Unfortunately, In this situation, there is nothing wrong with the map that we can adjust to prevent issues with the app. Please report this to https://support.google.com/waze/answer/6276841",
     "NotIdentified", //twintiggrz, t0cableguy, rickzabel 12/27/2015
 
-    "Bad GPS",
+    "GPS - Bad Signal",
     "Volunteer responding - It appears that your device was having GPS trouble. GPS signals do not travel through vehicles or tall buildings. Please make sure your device is somewhere with a clear view of the sky.",//rickzabel 12/18/2014
     "NotIdentified",
+
+    "GPS - Civilian Ambiguity",
+    "Civilian GPS has a designed in ambiguity of ~50 feet. Waze guesses your location, based on the instructions it has given you. \nIf it told you to take a turn, it assumes you took the turn, and directs you accordingly. \nWhen you get about half a block 'off course', then it recalculates. \nIt may sometimes direct you off of a route that seems best to you, based on traffic reports. \nIf you have more problems, please give us the details of where you were going. \nWaze does not give us that information. Closing report due to lack of response.", 
+    "NotIdentified",
+
+    "Not a map problem",
+    "We volunteer map editors can't make changes in the Waze App, all we can do is fix problems with the map. Your report appears to be more of an issue with the Application than the Map. Report > Map Issue is for reporting issues with the content of the map. Try http://www.waze.com/support or http://www.waze.com/forum.
+    "Open",
 
     "Report to local municipality",
     //"Volunteer responding - We are only able to help with map issues, this should be reported to the local municipality. Please feel welcome to report any map issues you encounter. Thanks!",//rickzabel Pesach 12/22/14
     "Volunteer responding - We are only able to help with map issues. This should be reported to the local municipality. Please feel welcome to report any map issues you encounter. Thanks!", //GizmoGuy, t0cableguy, rickzabel 1/14/2015
+    "NotIdentified",
+
+    "Server Posting Old URs",
+    "Volunteer responding - a Waze server glitch has just posted many old reports, most of which have already been solved. \nIf the problem still exists, please post another report. \nThank YOU for all the WAZE you help!",
     "NotIdentified",
 
     "Signal Avoidance Bug",
