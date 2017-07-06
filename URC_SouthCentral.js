@@ -4,7 +4,7 @@
 // @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
-// @version         0.0.3
+// @version         0.0.4
 // @include         /^https:\/\/(www|beta)\.waze\.com\/(?!user\/)(.{2,6}\/)?editor\/.*$/
 // @author          Original script created by Rick Zabel '2014, Modified for use in SCR by Travis Turner
 // @license         MIT/BSD/X11
