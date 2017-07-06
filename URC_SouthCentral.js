@@ -761,7 +761,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "NotIdentified",
 
     "Not a map problem",
-    "We volunteer map editors can't make changes in the Waze App, all we can do is fix problems with the map. Your report appears to be more of an issue with the Application than the Map. Report > Map Issue is for reporting issues with the content of the map. Try http://www.waze.com/support or http://www.waze.com/forum.
+    "We volunteer map editors can't make changes in the Waze App, all we can do is fix problems with the map. Your report appears to be more of an issue with the Application than the Map. Report > Map Issue is for reporting issues with the content of the map. Try http://www.waze.com/support or http://www.waze.com/forum",
     "Open",
 
     "Report to local municipality",
