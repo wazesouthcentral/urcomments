@@ -334,6 +334,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Volunteer Responding - Thanks for the report. The OK regulatory speed limit for unmarked streets is 25 MPH, and has been verified by local editors. If you would like to see speed limits at all times while using the app, please go to Settings > Speedometer > Show speed limit. In the future, please make sure you submit any speed limit requests as close to the sign where the speed limit changes. If the speed limit change is temporary due to construction, please advise and provide additional details. If you have any other issues please let us know and thanks for using Waze!",
     "Solved",
 
+    "Speed Limit - Texas 30mph Default",
+    "Volunteer Responding - Thanks for the report. The TX regulatory speed limit for unmarked streets is 30 MPH, and has been verified by local editors. If you would like to see speed limits at all times while using the app, please go to Settings > Speedometer > Show speed limit. In the future, please make sure you submit any speed limit requests as close to the sign where the speed limit changes. If the speed limit change is temporary due to construction, please advise and provide additional details. If you have any other issues please let us know and thanks for using Waze!",
+    "Solved",
+    
     "Speed Limit - Request Details",
     "Volunteer Responding.  Can you provide us details on where the new speed limit begins?",
     "Open",
@@ -558,8 +562,8 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Please clear your Text-to-Speech cache. In the navigate search box type cc@tts in the search field and press search. You will get a message that the TTS file has been cleared. Your TTS cache we be re-populated as you use routing.. Thanks!", //GizmoGuy411  t0cableguy rickzabel 2015-04-04
     "NotIdentified", //t0cableguy This should be a last chance option for fixing the issue.04-04-2015  //rickzabel 04-04-2015
 
-    "Editor Recruitment to Slack",
-    "Thank you for helping us make the map better!  If you'd like to join in on map editing, we invite you to join our regional communication platform, Slack, by filling out a simple form.  The form is located at http://bit.ly/2i3Yuij, once it is completed, you'll receive an invite via e-mail to join the Slack platform.",
+    "Editor Recruitment to Discord",
+    "Thank you for helping us make the map better!  If you'd like to join in on map editing, we invite you to join our regional communication platform, Discord.  You may join by following this link: https://discord.me/waze_scr",
     "Open",
 
     "Errors with no text",
