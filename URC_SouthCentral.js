@@ -4,7 +4,7 @@
 // @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
-// @version         0.0.8
+// @version         0.0.9
 // @match           https://editor-beta.waze.com/*editor*
 // @match           https://beta.waze.com/*editor*
 // @match           https://www.waze.com/*editor*
@@ -22,17 +22,18 @@ var URCommentVersionUpdateNotes = "UR Comments USA_SouthCentral has been updated
  * 5th update to the format
  * 0.0.1 - initial version
  * 0.0.8 - alert for reminders per rickzabel
+ * 0.0.9 - adjust auto reminder/close positions
  */
 
 //Custom Configuration: this allows your "reminder", and close as "not identified" messages to be named what ever you would like.
 //the position in the list that the reminder message is at. (starting at 0 counting titles, comments, and ur status). in my list this is "4 day Follow-Up"
-window.UrcommentsUSA_SouthCentralReminderPosistion = 24;
+window.UrcommentsUSA_SouthCentralReminderPosistion = 25;
 
 //this is the note that is added to the the reminder link  option
 window.UrcommentsUSA_SouthCentralReplyInstructions = 'To reply, please either use the Waze app or go to '; //followed by the URL - superdave, rickzabel, t0cableguy 3/6/2015
 
 //the position of the close as Not Identified message (starting at 0 counting titles, comments, and ur status). in my list this is "7th day With No Response"
-window.UrcommentsUSA_SouthCentralCloseNotIdentifiedPosistion = 27;
+window.UrcommentsUSA_SouthCentralCloseNotIdentifiedPosistion = 7;
 
 //This is the list of Waze's default UR types. edit this list to match the titles used in your area!
 //You must have these titles in your list for the auto text insertion to work!
@@ -230,7 +231,6 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "",
     "Open",
 
-
     "Fixed",
     //"Thanks to your report we've found and fixed a problem with the map. The fix should reach handheld devices within a few days, but on rare occasions it can take closer to a week.",//karlcr9911 12/7/14  //removed an extra space at the end - rickzabel 12/7/14 t0cableguy 12/8/14
     //"Thanks to your report we've found and fixed a problem with the map. The fix should reach mobile devices within a few days. On rare occasions it can take closer to a week.", //GizmoGuy, t0cableguy, rickzabel 1/14/2015
@@ -244,7 +244,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "No further communication (f)",
     "No further information was received.  Based on the resources available, we have made edits in the vicinity of this report that may fix your issue.  As you travel, please feel welcome to report any map issues you encounter. Thanks!",
-    "Solved", 
+    "Solved",
 
     "No further communication (ni)",
     //"No further communication was received. This request will now be closed. As you travel, please feel welcome to report any map issues you encounter. Thanks!",  //rickzabel 12/7/14, karlcr9911 12/7/14 t0cableguy 12/8/14 // one sentence? rickzabel 12/7/14
@@ -260,8 +260,6 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Thank you for the reply! This request will be closed. As you travel, please feel welcome to report any map issues you encounter.",
     "NotIdentified", //rickzabel 12/27/14
 
-
-
     "Address fishing",
     //"Waze does not tell us your starting or ending destinations. Would you tell us the address you are having problems with as you entered it into Waze? Thanks!"
     //"Waze does not tell us your starting or ending destinations. Would you please tell us the destination name and address you are having problems with? Thanks!", //t0cableguy 12/7/14, karlcr9911 12/7/14 
@@ -269,7 +267,12 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //this is going to be the message we voted on above! rickzabel 12/8/14
     "Waze does not tell us your starting or ending destinations. Would you tell us your destination as you entered it into Waze? Thanks!", //rickzabel i use this one after i sent a message with Volunteer responding 1
     "Open",
-    
+
+    "Reminder message", //do not change (rickzabel)
+    //"Just a reminder: We have not received a response on your report. If we don't hear back from you soon we will infer everything is okay and close the report. Thanks!", //karlcr9911 12/7/14  //this has been getting me the most responses, but it probably is the special link i am including with the UR layer enabled rickzabel 12/7/14 t0cableguy 12/8/14
+    "Just a reminder: We have not received a response on your report. If we don't hear back from you soon, we will infer everything is okay and close the report. Thanks!",//GizmoGuy, t0cableguy, rickzabel 1/14/2015
+    "Open",
+
 // Closures --------------------------------------------------------
     "<br><b>CLOSURES</b>",
     "",
@@ -580,7 +583,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "Not at this location",
     "The problem you are reporting doesn't appear to be located near the location where you started your report. Volunteer map editors have limited editing areas.\nWhen a report is filed from a location that is not near the problem, the problem may be outside their editing area.\nPlease make sure to start reports near the location of the problem.",
-    "Open",    
+    "Open",
 
     "Overall Waze complaint",
     "Volunteer responding - You can help make Waze better by reporting problems as you find them. Please include as many details as possible? Thanks!",
@@ -588,7 +591,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "Tag [NOTE] for Editor",
     "[NOTE] an anonymous editor appears to have posted a UR saying \"$URD\". \nTO that editor: Please do whatever you wanted done and close this report.",
-    "Open",   
+    "Open",
 
     "<br>",
     "",
@@ -789,19 +792,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "Water Layer Edits",
     "This particular water feature is not editable by the volunteer editors, feel free to report this to support at https://support.google.com/waze/",
-    "NotIdentified",
-
-    "<br>",
-    "",
-    "",
-
-    "Reminder message", //do not change (rickzabel)
-    //"Just a reminder: We have not received a response on your report. If we don't hear back from you soon we will infer everything is okay and close the report. Thanks!", //karlcr9911 12/7/14  //this has been getting me the most responses, but it probably is the special link i am including with the UR layer enabled rickzabel 12/7/14 t0cableguy 12/8/14
-    "Just a reminder: We have not received a response on your report. If we don't hear back from you soon, we will infer everything is okay and close the report. Thanks!",//GizmoGuy, t0cableguy, rickzabel 1/14/2015
-    "Open"
+    "NotIdentified"
 
 ];
 //end Custom list
 
-alert("Reminder " + window.UrcommentsUSA_SouthCentralArray2[window.UrcommentsUSA_SouthCentralReminderPosistion]);
-alert("Close message " + window.UrcommentsUSA_SouthCentralArray2[window.UrcommentsUSA_SouthCentralCloseNotIdentifiedPosistion]);
+//alert("Reminder " + window.UrcommentsUSA_SouthCentralArray2[window.UrcommentsUSA_SouthCentralReminderPosistion]);
+//alert("Close message " + window.UrcommentsUSA_SouthCentralArray2[window.UrcommentsUSA_SouthCentralCloseNotIdentifiedPosistion]);
