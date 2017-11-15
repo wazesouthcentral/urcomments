@@ -465,7 +465,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //"Volunteer responding - We can't find anything on the map to explain the route Waze gave you. Waze will route complex detours to save a few seconds. We are very sorry to say that map editors can not be helpful in this situation. Thanks!", //rickzabel 12/11/14
     "Volunteer responding - We can't find anything on the map to explain the route Waze gave you. Waze will route complex detours to save a few seconds. We are very sorry to say that map editors cannot be helpful in this situation. Thanks!", //rickzabel 4/18/20115
     "NotIdentified",
-
+    
     "Routing - Valid Route",
     //"We reviewed the issue and did not find any map errors. It looks like Waze provided a valid route. If you feel yours is correct, keep driving that way. If it is indeed faster, Waze will learn from your drives and route you and others the faster route. Thanks!", //karlcr9911 12/7/14  
     //"We reviewed the issue and did not find any map errors. It looks like Waze provided you with a valid route. If you feel yours is correct, keep driving that way. If it is indeed faster, Waze will learn from your drives and route you and others the faster route. Thanks!", //added "you with" rickzabel 12/7/14
@@ -491,6 +491,10 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Volunteer responding - It appears that you followed the route Waze suggested. Would you please let us know what went wrong with the route Waze gave you? Would you tell us your destination as you entered it into Waze? Thanks!", //reworded rickzabel 12/7/2014
     "Open",
 
+    "Routing - Signal Avoidance",
+    "Volunteer respoding - You have experienced what we call 'signal avoidance' in which Waze has determined, on average, it is quicker to make an adjoining u-turn rather than making the left turn at this intersection.  While it believes it is faster, it learns by collecting data.  If you feel you would not gain an advantage by exercising the u-turn, feel free to take the left turn.  Waze will learn more from every drive you take and hopefully provide a better instruction in the future",
+    "NotIdentified",
+    
     "HOV - Information Collection",
     "Volunteer map editor here, Waze is collecting information on cases such as this one. Please open this form and file a report: http://j.mp/HOVproject \n Thanks!",
     "Open",
