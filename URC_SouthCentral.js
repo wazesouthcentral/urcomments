@@ -4,7 +4,7 @@
 // @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
-// @version         2018.02.27.01
+// @version         2018.03.13.01
 // @include			/^https:\/\/(www|beta)\.waze\.com\/(?!user\/)(.{2,6}\/)?editor\/?.*$/
 // @author          Original script created by Rick Zabel '2014, Modified for use in SCR by Travis Turner (turnertr) turnertr_waze@gmail.com and assisted by Daniel Beames (dBsooner) daniel@dbsooner.com
 // @license         MIT/BSD/X11
@@ -18,6 +18,7 @@
  * 0.0.11 - Corrections to update messaging
  * 2018.02.22.01 - New version numbering, update Address Adjustment, Added "Add Toll Pass to App", change "I" to "We". - dB
  * 2018.02.27.01 - Modified Address Adjustment, spellchecked. - dB
+ * 2018.03.13.01 - Added Researching, moved Unlock Request, modified Speed Limit already correct. - dB
  */
 
 var URCommentUSA_SouthCentralVersion = GM_info.script.version;
@@ -273,6 +274,19 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //this is going to be the message we voted on above! rickzabel 12/8/14
     "Waze does not tell us your starting or ending destinations. Would you tell us your destination as you entered it into Waze? Thanks!", //rickzabel i use this one after i sent a message with Volunteer responding 1
     "Open",
+	
+	"Researching",
+	"Volunteer responding. We are currently looking into this issue. Thank you for the report. Is there additional information to share with us as to what went wrong with your route? Also, what was the destination as you entered it into Waze?",
+	"Open",
+	
+    "Unlock request",
+    //"I have requested the rights to get this issue fixed. Thanks for your report. Thanks! ", //requested by t0cableguy 12/8/14
+    //"Volunteer responding to your report: I have requested the rights to get this issue fixed. Thanks for your report.", //rikzabel 12/8/14  i usually dont say anything cause this is weird that they made a request for you to make a request…
+    //"I have begun the process to get this issue fixed. Thanks for your report. Thanks! ",//reword t0cableguy 12/8/14
+    //"I have begun the process to get this issue fixed. Thanks for your report!", //rickzabel 12/11/14
+    "We have started the process to get this issue fixed. Thanks for your report!",  //GizmoGuy, t0cableguy, rickzabel 1/14/2015
+    "Open",
+
 
     "Reminder message", //do not change (rickzabel)
     //"Just a reminder: We have not received a response on your report. If we don't hear back from you soon we will infer everything is okay and close the report. Thanks!", //karlcr9911 12/7/14  //this has been getting me the most responses, but it probably is the special link i am including with the UR layer enabled rickzabel 12/7/14 t0cableguy 12/8/14
@@ -336,8 +350,9 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Solved", //karlcr9911 rickzabel
 
     "Speed Limit - Already Correct",
-    "Volunteer Responding. The speed limit is set as you indicate in this report. Please allow for GPS error and Waze best mapping practices by waiting up to 200 feet after passing the sign for the correct speed to show in the app. If you would like to see speed limits at all times while using the app, please go to Settings > Speedometer > Show speed limit. Thank You!", // SER
-    "Solved",
+    //"Volunteer Responding. The speed limit is set as you indicate in this report. Please allow for GPS error and Waze best mapping practices by waiting up to 200 feet after passing the sign for the correct speed to show in the app. If you would like to see speed limits at all times while using the app, please go to Settings > Speedometer > Show speed limit. Thank You!", // SER
+    "Volunteer Responding. The speed limit is already set correctly for this road. Please note that sometimes it can take a couple seconds for a speed limit change to show in the app. Also, note that we currently do not support variable time-based speed limits, such as school zones." // per sketch 2018.03.13
+	"NotIdentified",
 
     "Speed Limit - Non-Regulatory",
     "Volunteer Responding - Thank you for your report. Speed limit signs are usually marked with white signs with a black border.  Yellow speed limit signs on ramps are advisory speeds to suggest adjusting speeds for exits and we don't add them. It is still up to the driver to be cognizant of local signage and noting the speed changes themselves and to take appropriate action and not rely upon an electronic device that may not be as accurate on that day as one might like.",
@@ -760,16 +775,6 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //"Blank Screen.",
     //"Please follow these instructions in the app. Tap the Wazer icon > Settings > Advanced > Data transfer > Refresh map of my area. Second you can try clearing Waze's app cache in your phone’s app manager. The final option is  to Uninstall and Reinstall the app.",
     //"Open", //requested by t0cableguy 12/7/14 in map refresh now t0cableguy 12/8/14
-
-    "Unlock request",
-    //"I have requested the rights to get this issue fixed. Thanks for your report. Thanks! ", //requested by t0cableguy 12/8/14
-    //"Volunteer responding to your report: I have requested the rights to get this issue fixed. Thanks for your report.", //rikzabel 12/8/14  i usually dont say anything cause this is weird that they made a request for you to make a request…
-    //"I have begun the process to get this issue fixed. Thanks for your report. Thanks! ",//reword t0cableguy 12/8/14
-    //"I have begun the process to get this issue fixed. Thanks for your report!", //rickzabel 12/11/14
-    "I have started the process to get this issue fixed. Thanks for your report!",  //GizmoGuy, t0cableguy, rickzabel 1/14/2015
-    "Open",
-
-
 
     "<br><b>SUPPORT REQUESTS/UNSOLVABLE</b>",
     "",
