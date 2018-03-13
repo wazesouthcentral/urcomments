@@ -4,7 +4,7 @@
 // @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
-// @version         2018.03.13.01
+// @version         2018.03.13.02
 // @include			/^https:\/\/(www|beta)\.waze\.com\/(?!user\/)(.{2,6}\/)?editor\/?.*$/
 // @author          Original script created by Rick Zabel '2014, Modified for use in SCR by Travis Turner (turnertr) turnertr_waze@gmail.com and assisted by Daniel Beames (dBsooner) daniel@dbsooner.com
 // @license         MIT/BSD/X11
@@ -19,6 +19,7 @@
  * 2018.02.22.01 - New version numbering, update Address Adjustment, Added "Add Toll Pass to App", change "I" to "We". - dB
  * 2018.02.27.01 - Modified Address Adjustment, spellchecked. - dB
  * 2018.03.13.01 - Added Researching, moved Unlock Request, modified Speed Limit already correct. - dB
+ * 2018.03.13.02 - Missed "," after a statement in array. - dB
  */
 
 var URCommentUSA_SouthCentralVersion = GM_info.script.version;
@@ -351,7 +352,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "Speed Limit - Already Correct",
     //"Volunteer Responding. The speed limit is set as you indicate in this report. Please allow for GPS error and Waze best mapping practices by waiting up to 200 feet after passing the sign for the correct speed to show in the app. If you would like to see speed limits at all times while using the app, please go to Settings > Speedometer > Show speed limit. Thank You!", // SER
-    "Volunteer Responding. The speed limit is already set correctly for this road. Please note that sometimes it can take a couple seconds for a speed limit change to show in the app. Also, note that we currently do not support variable time-based speed limits, such as school zones." // per sketch 2018.03.13
+    "Volunteer Responding. The speed limit is already set correctly for this road. Please note that sometimes it can take a couple seconds for a speed limit change to show in the app. Also, note that we currently do not support variable time-based speed limits, such as school zones.", // per sketch 2018.03.13
 	"NotIdentified",
 
     "Speed Limit - Non-Regulatory",
