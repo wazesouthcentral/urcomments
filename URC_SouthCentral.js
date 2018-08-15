@@ -4,7 +4,7 @@
 // @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
-// @version         2018.03.13.02
+// @version         2018.08.15.01
 // @match          https://editor-beta.waze.com/*editor*
 // @match          https://beta.waze.com/*editor*
 // @match          https://www.waze.com/*editor*
@@ -22,6 +22,7 @@
  * 2018.02.27.01 - Modified Address Adjustment, spellchecked. - dB
  * 2018.03.13.01 - Added Researching, moved Unlock Request, modified Speed Limit already correct. - dB
  * 2018.03.13.02 - Missed "," after a statement in array. - dB
+ * 2018.08.15.01 - Changed match statements to match the parent script -tt
  */
 
 var URCommentUSA_SouthCentralVersion = GM_info.script.version;
