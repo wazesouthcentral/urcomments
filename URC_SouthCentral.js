@@ -4,7 +4,7 @@
 // @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
-// @version         2018.08.15.01
+// @version         2018.11.06.01
 // @match          https://editor-beta.waze.com/*editor*
 // @match          https://beta.waze.com/*editor*
 // @match          https://www.waze.com/*editor*
@@ -23,6 +23,7 @@
  * 2018.03.13.01 - Added Researching, moved Unlock Request, modified Speed Limit already correct. - dB
  * 2018.03.13.02 - Missed "," after a statement in array. - dB
  * 2018.08.15.01 - Changed match statements to match the parent script -tt
+ * 2018.11.06.01 - Fixed index for default reminder position. Added Manual Tile Refresh. Revised Add Toll Pass to App. - dB
  */
 
 var URCommentUSA_SouthCentralVersion = GM_info.script.version;
@@ -38,7 +39,7 @@ if (URCommentUSA_SouthCentralUpdateMessage === "yes") {
 
 //Custom Configuration: this allows your "reminder", and close as "not identified" messages to be named what ever you would like.
 //the position in the list that the reminder message is at. (starting at 0 counting titles, comments, and ur status). in my list this is "4 day Follow-Up"
-window.UrcommentsUSA_SouthCentralReminderPosistion = 24;
+window.UrcommentsUSA_SouthCentralReminderPosistion = 30;
 
 //this is the note that is added to the the reminder link  option
 window.UrcommentsUSA_SouthCentralReplyInstructions = 'To reply, please either use the Waze app or go to '; //followed by the URL - superdave, rickzabel, t0cableguy 3/6/2015
@@ -236,6 +237,7 @@ window.UrcommentsUSA_SouthCentralURC_USER_PROMPT[11] = "URComments - This will s
 
 //Custom list
 window.UrcommentsUSA_SouthCentralArray2 = [
+
     "<br><b>COMMON RESOLUTIONS/RESPONSES</b>",
     //"Thanks to your report we've found and fixed a problem with the map. The fix should reach handheld devices within a few days, but on rare occasions it can take closer to a week.",//karlcr9911 12/7/14  //removed an extra space at the end - rickzabel 12/7/14 t0cableguy 12/8/14
     //"Thanks to your report we've found and fixed a problem with the map. The fix should reach mobile devices within a few days. On rare occasions it can take closer to a week.", //GizmoGuy, t0cableguy, rickzabel 1/14/2015
@@ -278,11 +280,11 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //this is going to be the message we voted on above! rickzabel 12/8/14
     "Waze does not tell us your starting or ending destinations. Would you tell us your destination as you entered it into Waze? Thanks!", //rickzabel i use this one after i sent a message with Volunteer responding 1
     "Open",
-	
+
 	"Researching",
 	"Volunteer responding. We are currently looking into this issue. Thank you for the report. Is there additional information to share with us as to what went wrong with your route? Also, what was the destination as you entered it into Waze?",
 	"Open",
-	
+
     "Unlock request",
     //"I have requested the rights to get this issue fixed. Thanks for your report. Thanks! ", //requested by t0cableguy 12/8/14
     //"Volunteer responding to your report: I have requested the rights to get this issue fixed. Thanks for your report.", //rikzabel 12/8/14  i usually dont say anything cause this is weird that they made a request for you to make a request…
@@ -290,7 +292,6 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //"I have begun the process to get this issue fixed. Thanks for your report!", //rickzabel 12/11/14
     "We have started the process to get this issue fixed. Thanks for your report!",  //GizmoGuy, t0cableguy, rickzabel 1/14/2015
     "Open",
-
 
     "Reminder message", //do not change (rickzabel)
     //"Just a reminder: We have not received a response on your report. If we don't hear back from you soon we will infer everything is okay and close the report. Thanks!", //karlcr9911 12/7/14  //this has been getting me the most responses, but it probably is the special link i am including with the UR layer enabled rickzabel 12/7/14 t0cableguy 12/8/14
@@ -517,7 +518,11 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Routing - Signal Avoidance",
     "Volunteer responding - You have experienced what we call 'signal avoidance' in which Waze has determined, on average, it is quicker to make an adjoining u-turn rather than making the left turn at this intersection.  While it believes it is faster, it learns by collecting data.  If you feel you would not gain an advantage by exercising the u-turn, feel free to take the left turn.  Waze will learn more from every drive you take and hopefully provide a better instruction in the future",
     "NotIdentified",
-    
+	
+	"Routing - Manual Tile Refresh",
+	"The map has been updated in this area. Please force a manual map refresh of your area by following these instructions: \n\nAndroid: Tap the following: Search icon > Settings gear icon (top left) > General > Refresh map of my area.\n\niOS: First enter dubug mode by searching for "2##2". You should see a popup saying "Log level set to DEBUG". If you see popup saying "Log level set to WARNING", please search for "2##2" again. After in debug mode, tap the following: Search icon > Settings gear icon (top left) > Display & map > Refresh map of my area (at the bottom).",
+    	"Open",
+
     "HOV - Information Collection",
     "Volunteer map editor here, Waze is collecting information on cases such as this one. Please open this form and file a report: http://j.mp/HOVproject \n Thanks!",
     "Open",
@@ -528,7 +533,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "NotIdentified",
 
 	"Tolls - Add Toll Pass to App",
-	"Waze has a new feature for toll pass users. If you have a toll pass subscription, please add it to your settings so the app can use the roads that require a pass. To do this, please open \"Settings\", \"Navigation\", \"Add Toll/HOV Passes\", then add the pass. If you do not see the pass, please tap \"Show All Passes\". Thank you!",
+	"Waze has a new feature for toll pass users. The toll road was recently updated on the Waze map so that it requires an electronic toll tag. If you have a toll pass subscription, please add it to your settings so the app can use the roads that require a pass. To do this, please open \"Settings\", \"Navigation\", \"Add Toll/HOV Passes\", then add the pass. If you do not see the pass, please tap \"Show All Passes\". Thank you!",
 	"NotIdentified", // dBsooner 2018.02.22
 	
     "Tolls - No user transponder (avoid tolls)",
