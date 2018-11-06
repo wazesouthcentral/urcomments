@@ -4,10 +4,10 @@
 // @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
-// @version         2018.11.06.01
-// @match          https://editor-beta.waze.com/*editor*
-// @match          https://beta.waze.com/*editor*
-// @match          https://www.waze.com/*editor*
+// @version         2018.11.06.02
+// @match           https://editor-beta.waze.com/*editor*
+// @match           https://beta.waze.com/*editor*
+// @match           https://www.waze.com/*editor*
 // @author          Original script created by Rick Zabel '2014, Modified for use in SCR by Travis Turner (turnertr) turnertr_waze@gmail.com and assisted by Daniel Beames (dBsooner) daniel@dbsooner.com
 // @license         MIT/BSD/X11
 // @icon            data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAwCAYAAACFUvPfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQyQjZDNjdEODYzODExRTRBRDY0Q0I2QjA1MjU4N0EyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQyQjZDNjdFODYzODExRTRBRDY0Q0I2QjA1MjU4N0EyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDJCNkM2N0I4NjM4MTFFNEFENjRDQjZCMDUyNTg3QTIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDJCNkM2N0M4NjM4MTFFNEFENjRDQjZCMDUyNTg3QTIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6++Bk8AAANOElEQVR42tRZCWxU1xW9M39mPB5v431fMLYJdmpjthQUVsdlS9IQQkpIIDRhl5pKQUpbKkAEpakQIhVVRUytQIGwihCaBkgItQELQosxdrDZ7Njjbbx7vM0+f3ruZDz1NmTGhEj59tOb//979553313fl9jtdvqpXbLHRVgikTz0NbdJkyYJERERUp1OJ1Wr1WJLS4tYXFxswzu7s408+XFJ2g1oSUZGhtzf318piqLKx8dHZbPZFFKpVMC9TRAEs8lk0uNe39vbaywvL7eMBP5HAz179myZxWLxxfNg3IZHRkbG5OTkpEPSkQAs1Wq1nQUFBVXt7e2twNSGMdx3yuVyQ2FhofVHBw01kCsUigA8i1m9evXc3Nzc5TExMRMhUfnAOZC6VaPRlJ8+ffrzM2fOXMW9BvgazWZzD9TG8qOBZgnr9fqg5OTklPfff39bUlLSfL3ZKvmmqZ2q2rqoy2h2jAtSKmhsaBD9LDqUVAqZ/fbt29c2b978IfS9HCqjUalUXf0Sfyygp0+f7kB8584d6bhx4/xTU1PT9uzZk69WB2derdHSxQf1ZLTaRpyrlAmUkxpH05OiqbGxoWrjxo07Wltbb0KFNNevX+/FENEBmqUyWvCTJ0+WDPEKrh4S8oFXiDp+/HhedHT0M6fKvqWbDa0e0Z0YG05LMpPp/v37xWvXrn0XqlRWX1+vraysNEkfZu38zE1zXHPmzOH53ARuAQEBUuieBM2OJoaFhSl27NixAPr7TGFVo8eA+eKxPAc7Nen111/PgX5HxMXF+TIsmSe+1bkbEuintKamRoBeyqxWq6Knp0eA2xJAUAJ3Zce9+PTTT9tkMpkF7opgQEEwwjU6g4kKKhu83sWCynrKjg2jhQsXPrd///4L2Dkm0iv9PntiSUIF5JmZmSpMCsI2hwNMNBYSC4+QgLUkoE909vF4HoP3kVhY+Pz589Mh/czi+layiqLXoK2inXhuVFRUUlZWViIE45eSkiI8LCKyZAUAZbfki8sfxhA4bdq0+GXLluUmJCRMBqCxkHQY9E2BdxwY2iDtqtra2hsHDhy4jIVOYTqV8BIDr3ERakd/r0Xn9nf/9aBNx4YpmTlzZtrNmzcvBwUFuQXNIZaDgRJS84eDV8+bN2/cqlWr1rF+AqTMbDFRU72WdI29ZNZbSaGSKdQx/jFRcdExERGTZ6Snp/8GYbmGiXVBPQZeyyakOvrtX/7X7e/+S2f4ziXCPoIhaam73MMBGJcvBgXBP4bv3LnztSlTpmwAWOW9svtU/kkd1V/rINE23ONIBQnFTQuh1OciZXHJsSn8TBwy7NitB67g7O53/yX8386sHOqhgnbZSCrBEoaOqpVKZXReXt5W6OfC5uZGuvjnW9RU2v1QPbRZ7aS50kbVl5spY2kHLdg4i0L9lNRtMrvGDNx+d7/7rxCVj6Nva2vTArARPts21BClHR0dPqy7MKgIAOYItrD8ZgUdWXmFtCVdZIfYPGsILufqsBsipYYHjTpQpYWrCXjEixcv3oKX6oNXGgRasmDBAhkyMD+MCd21a9dKAF5QUVxB598uJZvR5nB9njZHcOm20oOva2lKfAT5yASvAXN0nIy5zc3NJRUVFd/CvvpY26QDsjABhqMEw0AYXQZ0eG1TUwOd+30pr9QrwA7Q+JfapVT0j1sE46BF4xO9Bv1sehIDF8+ePfsR7KmF01UOG/06LUGIFIKDg33hwtRvvPHGagzyOf9uMVlNVrdEx+ZEUdZLSZSYlkBymYK6ejrp/rVqupFfTT3NBodNNd1pp6IjJTRzxSRHcsR5hyfXL9LiaWJcOOcvJ/Pz8wvgSjud+bXLe0iR3yogIb+JEyeOiY+Pn1VRUkHaMt3I5Y5CSs/unkTjJ4wf9FwdGEJT54VQ1px0Or21kKqLWhGdZHRpXwn5h6goZ9F4ig5UEecgBsvIwghVKSHhRPjsYIIgv3jrrbfeMxqNWrhQA0DbXaChGhKkjwpI2W/JkiXsh4XS4xq3SdSczRnDAA+8fBS+9OKOuZS/4jPS1fUhlRTo0z8VUGeHjua+Ng3pp47+U9viGv8Egkp0oB+NCQlEehrI6mhEarpvw4YNfzMYDM3IEntPnjxpG1QjsmogPCtgnX6JiYnZJrPRISW7OBy0b4Ccsudkfu/2KuQ+NGXtGPrij9+QiD8b/vyDVWSDfVQ0dTrGBPjI6YUnk+mJyGDOF+wACCj1Xx47duwQ9Pge7ruReJmcdePgwjY8PFzKtRoinxKpZFJjbSNXESOCCc8IIgQdj/QyeUI8AkupA3DChCiaujCTyps7KF7tT2mQ7oSYMJJJyFp840beoUOHjiBM17OHAG8DUgTzgCJ3eDXOKSUsU4ZtUSDHUHc0drlVjYAYpcfWLyBL6KczY/kkkkgl9CQqE27skZAb30Cuve/ChQuFiA9aCM9YVFRke1gl7gKN1UkQtlnaUq7bLMglyA3omGzPA0VjdZODDjJwOrXlIl3PKiOFv5ySc8IoKT2BkMt8AL4VXMjCyPq+D+ywcw+AtbNKoFnkKplctItDPIZArx6cRWOSx3oMuvhgFfXTsejtVH2tyZHspuZGENwru68upAt9UDeLp4DJWXUQJyFI6kVMtvX19XWExquHBQsL/PX9As8T+Suffk0PLjcOCjZkl3CFR5Fjwnh3O2BDlv4kyJvA5QDNFYczizK3t7fXxMbHkVQhcUhpYCvaW0H7Vp+iqsoHDwX87xNF9MWOkmHzuTHdmLg4gg5XMz/m6+RPXkkamZOIbeItMty7d++WXCan1LnRHOaHtbpbzVT4QZljxTbRRof/8E/au+oEHd3+LxewygtNI87llga6TP/u3bulzI/5Mn+vz/JQMNpQdXCmrj948GBRbm7uqqmvjfOpOKsZcdK317T0l5c/JptJpM7671LV+jJCFvixw0O01ejcV++vphFU0XT48OEi2I+e8yrm77WkCwsLRURDM3S6j8t0RKPC1CfSaOysGLd61VrZSR11XYOetWl01Frd6XYO00sbP47gKQpRkmmZH/Nl/l6DZhMBWOT+FnY7nbt37z4Bwfcs3jaLfIOUXmd4IzWmw/SYLtNnPsyP+XrjOQaBhqO3wmfqwUBXVVVVjVj/kTooxL48fzYJPsKIRuVp4/lMh+kxXabPfJgf8x0taEcph2TbzPEev1v27t174dKlS6fGpqTSm0fnU0C4alQS5nk8n+mA3idMl+kzH+bntFAaLWiWNm+VHv6zHX3D1q1bD3/11VcnksYki7898yvKfGkMOHgGlsdlvphMPI/nMx3QO8R0nfT1Tn5en8e5zvIGFrZc6fDBDIhHwJfGvvLKK7NXrFjxa+QoIVptA109WUqlJ2uot1M/jKBcIaOpq9Jo+tIsio6O5RjQgWToo6NHj15C1G2AHrfA+PggxAgDdOUZ3pwlDgU9CDhcUgDcUxisPDIkJCQBCflzTz311BzUkUG1dTX01+c/Iat5sLd6YefPadaiGQy2+/r16wV79uz5rLOzUwNazdDhNtDqGQr4hwDtAg7GCpVK5YeQq4bUQyCpSDCOfeedd55HHTm/8MwV+nTzVdekJ+cn0Zu7XubsrWLNmjUfYpfq0Jqw8HaEah0KjT5OOYcC/qFAu87xAF6u0+mU2FJ/gOZTnkg8jz9w4MCm5OTkjL+/fYxun9eQOiqAfvf5ShQOEt26deve1Wg0d0FbC3VoR+tBns7StTgNzz7SIedoDJFGOGfmbbYhxzZBWj0A3c6SQ2vYtm1bPpKrruXvLSJ1tD+9ujeHfJV+Yl5e3n4EjkoGDJVoY8A8f0ColgykP6qvDCPp9NKlS6UlJSUyqIYMDAU+u8MYmfNLlD+kHQbgcYsXL56xadOm9XpDr9RPFUAFBQVfbtmy5Qho1rFb4zVjjhH31sDAQCvcHJ+7WLu7u22IitaBn94eRT1cugxg/CXKl8/vMEbOF/d8tIBxfIIaivvI7du3/zInJ2d2XV1dzcqVKz+EZDlb4tPzHrw3YryZQXNihN0y8yIw1xAREWE8d+5cv7o8EmhpSkqKHGWPH0Cr+XiMz4TZk3Apxh6tHziYx+J3KNYSCA+xaOfOnVeqq6ubQUuH941o7NYYlJULC4w14Z0ehtyLe37XY8SFOtD6HWa7d1newEVwkcuqwODQs5T5k4EvepY+PxMgMTkWwc9l4Gtfv379ebwX0QS89+HzE/Qc7fhs28qVCcYL/LUAcy0Od65QCJj7g3xmtrPBREVFOXJrMOdi1wYAnLbKISHWbWbOC+vg+XzPjZUV4/mrq5V7bpC2o7jghnszABv4EJH9NPhY+w9fHhl0dna2FQQNXE1gK01wdQpIhMexWjgAcyXt7LmxivEnGTvXmUyDF8D3zm13nCszcNZrVhN4HRaC2Z37G5X36P/YjtJLCA0NlfIRA38UQi+BtCT8Ycj5hVUy/NhAcIFgb8H3SqVSZCH4+fmJ7DmgguLjiIhDvwmyG+SyTALmHvtYLNIOcHaei5S0H5X9UYPL/wQYAOwQASZqvrLnAAAAAElFTkSuQmCC
@@ -24,6 +24,7 @@
  * 2018.03.13.02 - Missed "," after a statement in array. - dB
  * 2018.08.15.01 - Changed match statements to match the parent script -tt
  * 2018.11.06.01 - Fixed index for default reminder position. Added Manual Tile Refresh. Revised Add Toll Pass to App. - dB
+ * 2018.11.06.02 - Didn't escape quotations. My fault. :( - dB
  */
 
 var URCommentUSA_SouthCentralVersion = GM_info.script.version;
@@ -275,7 +276,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "Address fishing",
     //"Waze does not tell us your starting or ending destinations. Would you tell us the address you are having problems with as you entered it into Waze? Thanks!"
-    //"Waze does not tell us your starting or ending destinations. Would you please tell us the destination name and address you are having problems with? Thanks!", //t0cableguy 12/7/14, karlcr9911 12/7/14 
+    //"Waze does not tell us your starting or ending destinations. Would you please tell us the destination name and address you are having problems with? Thanks!", //t0cableguy 12/7/14, karlcr9911 12/7/14
     //"Waze does not tell us your starting or ending destinations. Would you please tell us the destination name and address you are having problems with? Thanks!",
     //this is going to be the message we voted on above! rickzabel 12/8/14
     "Waze does not tell us your starting or ending destinations. Would you tell us your destination as you entered it into Waze? Thanks!", //rickzabel i use this one after i sent a message with Volunteer responding 1
@@ -290,7 +291,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //"Volunteer responding to your report: I have requested the rights to get this issue fixed. Thanks for your report.", //rikzabel 12/8/14  i usually dont say anything cause this is weird that they made a request for you to make a request…
     //"I have begun the process to get this issue fixed. Thanks for your report. Thanks! ",//reword t0cableguy 12/8/14
     //"I have begun the process to get this issue fixed. Thanks for your report!", //rickzabel 12/11/14
-    "We have started the process to get this issue fixed. Thanks for your report!",  //GizmoGuy, t0cableguy, rickzabel 1/14/2015
+    "We have started the process to get this issue fixed. Thanks for your report!", //GizmoGuy, t0cableguy, rickzabel 1/14/2015
     "Open",
 
     "Reminder message", //do not change (rickzabel)
@@ -306,16 +307,16 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Closure - Placed",
     //"Thank you for your report, the road has been closed.",
     //"Volunteer responding - Thank you for your report, the road has been closed.", //rickzabel 1211/14
-    "Volunteer responding - Thank you for your report. The road has been closed.",  //GizmoGuy, t0cableguy, rickzabel 1/14/2015
+    "Volunteer responding - Thank you for your report. The road has been closed.", //GizmoGuy, t0cableguy, rickzabel 1/14/2015
     "Solved", //requested by SkiDooGuy //changed to NotIdentified by karlcr9911 4/3/2015 //7/22/2015 changed to Solved by karlcr9911
 
     "Closure - Removed",
-    "Volunteer responding - Thank you for your report. The road has been re-opened.",  
-    "Solved", 
+    "Volunteer responding - Thank you for your report. The road has been re-opened.",
+    "Solved",
 
     "Closure - Issues Reopening",
     "We have been working to keep up with the closures and re-openings. Due to some technical difficulties, we were having issues reopening some closed roads. Please bear with us, and thank you for your report. ",
-    "Solved",     
+    "Solved",
 
     "Closure - Occasional Event",
     "Volunteer responding. Authorities briefly close roads in this area during occasional events. These events do not repeat on a daily or weekly schedule, so each one would need to be programmed manually into Waze.  You can use the Report->Closure feature in the app. It takes effect immediately, and the more people use it, the greater confidence Waze assigns the closure. This will work much better than submitting a \"Map Issue\" report like this one, since Map-Issue reports depend completely on volunteers for processing and can take some time.",
@@ -341,7 +342,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Open",
 
     "Closure - Server Problems",
-    //"Volunteer responding. There have been problems with road closures due a server problem. Road closures keep reappearing in this area. We are doing our best to keep things up-to-date, based on best available data from various agencies. \n\nStay safe and have the best of all possible days.", 
+    //"Volunteer responding. There have been problems with road closures due a server problem. Road closures keep reappearing in this area. We are doing our best to keep things up-to-date, based on best available data from various agencies. \n\nStay safe and have the best of all possible days.",
 	"Volunteer responding. There have been problems with road closures due to a recent server issue. We are doing our best to keep things up-to-date.  Thank you for your report.", // dBsooner 2018.02.22 per karlcr9911
     "NotIdentified",
 
@@ -370,7 +371,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Speed Limit - Texas 30mph Default",
     "Volunteer Responding - Thanks for the report. The TX regulatory speed limit for unmarked streets is 30 MPH, and has been verified by local editors. If you would like to see speed limits at all times while using the app, please go to Settings > Speedometer > Show speed limit. In the future, please make sure you submit any speed limit requests as close to the sign where the speed limit changes. If the speed limit change is temporary due to construction, please advise and provide additional details. If you have any other issues please let us know and thanks for using Waze!",
     "Solved",
-    
+
     "Speed Limit - Request Details",
     "Volunteer Responding.  Can you provide us details on where the new speed limit begins?",
     "Open",
@@ -389,11 +390,11 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "Speed Limit - Variable",
     "Volunteer Responding. Currently Waze does not support Variable Speed Limits (VSLs). Since we cannot enter in speed limits real time, the highest possible speed limit is displayed in Waze. If you would like to see speed limits at all times while using the app, please go to Settings > Speedometer > Show speed limit. Thank You.",
-    "Solved",    
+    "Solved",
 
     "Speed Limit - Verify Type",
     "Volunteer responding. Waze currently only maps day-time/full-time automobile regulatory speed limits (black on white signs). We do not assign school zones, truck limits, night limits, advisory limits, private roads, or parking lots. Is the limit you reported a permanent regulatory limit?",
-    "Open", 
+    "Open",
 
     "Speed Limit", //23
     "Waze did not send us enough information to fix your request. Would you please tell us as much as possible about the speed limit? Thanks!",
@@ -405,7 +406,6 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "<br><b>PLACES</b>",
     "",
     "Open",
-
 
     "Places - Address Adjustments",
     //"Thanks! The address has been adjusted. This should reach handheld devices within a few days, but on rare occasions it can take closer to a week.",
@@ -422,13 +422,13 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //"Thank you for your report. Would you please let us know what address you’re reporting the problem with? You can also use the Report -> Places feature in Waze to mark the location. It is helpful that after taking a picture, if you move near the location your are marking to save the place. Also, please do not submit pictures containing faces, license plates, or similar personal details. Thanks!", //i also prefer not to send messages with contractions "you’re" rickzabel 12/7/14
     //"What was the Address you had issues with? Please show us where the address you had issues is with the Report > Places feature in Waze. After taking a picture move as close to the entrance of the place you are adding before saving. Please do not submit images with personal details. Thanks!", //t0cableguy 12/7/14, karlcr9911 12/8/14
     //"What was the Address you had issues with? Please show us where the address you had issues is with the Report > Places feature in Waze. After taking a picture, move close to the entrance of the place you are adding, before saving. Please do not submit pictures containing faces, license plates, or personal details. Thanks!", //rickzabel 2/26/15
-    "Can you tell us the address or if you can revisit visit the location, please show us the correct position by using the Report > Places feature. Before you save move as close as possible to the entrance. Please do not submit pictures containing faces, license plates, or personal details. Thanks!",  //rickzabel t0cableguy 04-04-2015
+    "Can you tell us the address or if you can revisit visit the location, please show us the correct position by using the Report > Places feature. Before you save move as close as possible to the entrance. Please do not submit pictures containing faces, license plates, or personal details. Thanks!", //rickzabel t0cableguy 04-04-2015
     "Open",
 
     "Places - Address Missing from Map",
-    //"Thank you for your report. Would you please let us know where the address you're reporting is? The live map doesn't have all the street numbers for that street and Waze is interpolating in error. You can also use the Report -> Places feature in Waze to mark the location. It is helpful that after taking a picture, if you move near the location you’re marking to save the place. Also, please do not submit pictures containing faces, license plates, or similar personal details. Thanks!", //rickzabel 12/7/14 
-    //"Volunteer responding -  Would you let us know the address that is missing? The live map does not have all the street numbers. You can also use the Report Places feature in Waze to mark the location. It is helpful that after taking a picture that you move near the location you’re marking to save the place. Also, please do not submit pictures containing faces, license plates, or personal details. Thanks!", //rickzabel 12/9/14 
-    //"Volunteer responding -  Would you let us know the address that is missing? The live map does not have all the street numbers. You can also use the Report Places feature in Waze to mark the location. It is helpful that after taking a picture that you move near the location you’re marking to save the place. Please do not submit pictures containing faces, license plates, or personal details. Thanks!", //rickzabel 2/26/15 
+    //"Thank you for your report. Would you please let us know where the address you're reporting is? The live map doesn't have all the street numbers for that street and Waze is interpolating in error. You can also use the Report -> Places feature in Waze to mark the location. It is helpful that after taking a picture, if you move near the location you’re marking to save the place. Also, please do not submit pictures containing faces, license plates, or similar personal details. Thanks!", //rickzabel 12/7/14
+    //"Volunteer responding -  Would you let us know the address that is missing? The live map does not have all the street numbers. You can also use the Report Places feature in Waze to mark the location. It is helpful that after taking a picture that you move near the location you’re marking to save the place. Also, please do not submit pictures containing faces, license plates, or personal details. Thanks!", //rickzabel 12/9/14
+    //"Volunteer responding -  Would you let us know the address that is missing? The live map does not have all the street numbers. You can also use the Report Places feature in Waze to mark the location. It is helpful that after taking a picture that you move near the location you’re marking to save the place. Please do not submit pictures containing faces, license plates, or personal details. Thanks!", //rickzabel 2/26/15
     "Volunteer responding - Would you let us know the address that is missing? The available resources do not have the address available for your location. You can use the Report > Places feature in Waze to mark the location. Before you save move close as possible to the entrance. Do not submit pictures containing faces, license plates, or personal details. Thanks!", //rickzabel 4/5/2015 //t0cableguy 4/5/2015
     "Open",
 
@@ -453,7 +453,6 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Places - Close and Clear Address Cache",
     "Volunteer responding – Thank you for providing this updated information. We’ve verified the data you sent, and we’ve updated the map accordingly.  It’s through contributions like yours that help improve the maps for everyone.  It may take the system a few days to update before you see the changes in the Waze app.  Remember to clear your cached search results in your app, so Waze will route you to the right address, after the change has taken effect in the system.  Should you need help, you can follow these instructions: https://support.google.com/waze/answer/6262570?hl=en.  If you have any other issues or suggestions, please feel free to send an update. I hope you have a wonderful day!",
     "Solved",
-
 
     "Places - House Number Adjustment",
     //"I've forced Waze to re-register the house number for your destination. I believe this should correct your issue. Please allow 48 hours for changes to be reflected in the live map. If the location is in your saved searches or favorites, please remove them and search for them again to pick up the change in the live map. Please let me know if you continue to experience the problem. Thanks!",
@@ -489,15 +488,14 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     //"Volunteer responding - We can't find anything on the map to explain the route Waze gave you. Waze will route complex detours to save a few seconds. We are very sorry to say that map editors can not be helpful in this situation. Thanks!", //rickzabel 12/11/14
     "Volunteer responding - We can't find anything on the map to explain the route Waze gave you. Waze will route complex detours to save a few seconds. We are very sorry to say that map editors cannot be helpful in this situation. Thanks!", //rickzabel 4/18/20115
     "NotIdentified",
-    
+
     "Routing - Valid Route",
-    //"We reviewed the issue and did not find any map errors. It looks like Waze provided a valid route. If you feel yours is correct, keep driving that way. If it is indeed faster, Waze will learn from your drives and route you and others the faster route. Thanks!", //karlcr9911 12/7/14  
+    //"We reviewed the issue and did not find any map errors. It looks like Waze provided a valid route. If you feel yours is correct, keep driving that way. If it is indeed faster, Waze will learn from your drives and route you and others the faster route. Thanks!", //karlcr9911 12/7/14
     //"We reviewed the issue and did not find any map errors. It looks like Waze provided you with a valid route. If you feel yours is correct, keep driving that way. If it is indeed faster, Waze will learn from your drives and route you and others the faster route. Thanks!", //added "you with" rickzabel 12/7/14
     //"We reviewed the issue and did not find any map errors. It looks like Waze provided you with a valid route. Try the Waze suggested route a few times, it may turn out to actually be faster, if not you'll be teaching Waze that that route is slower, and your route will become preferred " //Pesach 12/8/14
     //"Volunteer responding - We reviewed the issue and did not find any map errors. It looks like Waze provided you with a valid route. Try the Waze suggested route a few times, it may turn out to actually be faster, if not you'll be teaching Waze that that route is slower, and the faster route will become preferred.", //rickzabel 12/8/14, karlcr9911 12/8/14
-    "Volunteer responding - We reviewed the issue and did not find any map errors. It looks like Waze provided you with a valid route. Try the Waze suggested route a few times, as it may turn out to actually be faster. If not you'll be teaching Waze that that route is slower, and the faster route will become preferred.",  //GizmoGuy, t0cableguy, rickzabel 1/14/2015
+    "Volunteer responding - We reviewed the issue and did not find any map errors. It looks like Waze provided you with a valid route. Try the Waze suggested route a few times, as it may turn out to actually be faster. If not you'll be teaching Waze that that route is slower, and the faster route will become preferred.", //GizmoGuy, t0cableguy, rickzabel 1/14/2015
     "NotIdentified",
-
 
     //"Routing - Valid but Difficult Route",    // Yes, we can do difficult routes now. (turnertr 7/6/17)
     //"Volunteer responding – We do not disable legal routes only because they are difficult. If you wait and complete the route, it may actually be faster than the alternative. If it’s not faster, you wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting the route. We also suggest if you do not feel comfortable, you can always go another route and let Waze recalculate."', //rz 2/26/15
@@ -518,9 +516,9 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "Routing - Signal Avoidance",
     "Volunteer responding - You have experienced what we call 'signal avoidance' in which Waze has determined, on average, it is quicker to make an adjoining u-turn rather than making the left turn at this intersection.  While it believes it is faster, it learns by collecting data.  If you feel you would not gain an advantage by exercising the u-turn, feel free to take the left turn.  Waze will learn more from every drive you take and hopefully provide a better instruction in the future",
     "NotIdentified",
-	
+
 	"Routing - Manual Tile Refresh",
-	"The map has been updated in this area. Please force a manual map refresh of your area by following these instructions: \n\nAndroid: Tap the following: Search icon > Settings gear icon (top left) > General > Refresh map of my area.\n\niOS: First enter dubug mode by searching for "2##2". You should see a popup saying "Log level set to DEBUG". If you see popup saying "Log level set to WARNING", please search for "2##2" again. After in debug mode, tap the following: Search icon > Settings gear icon (top left) > Display & map > Refresh map of my area (at the bottom).",
+	"The map has been updated in this area. Please force a manual map refresh of your area by following these instructions: \n\nAndroid: Tap the following: Search icon > Settings gear icon (top left) > General > Refresh map of my area.\n\niOS: First enter dubug mode by searching for \"2##2\". You should see a popup saying \"Log level set to DEBUG\". If you see popup saying \"Log level set to WARNING\", please search for \"2##2\" again. After in debug mode, tap the following: Search icon > Settings gear icon (top left) > Display & map > Refresh map of my area (at the bottom).",
     	"Open",
 
     "HOV - Information Collection",
@@ -535,7 +533,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 	"Tolls - Add Toll Pass to App",
 	"Waze has a new feature for toll pass users. The toll road was recently updated on the Waze map so that it requires an electronic toll tag. If you have a toll pass subscription, please add it to your settings so the app can use the roads that require a pass. To do this, please open \"Settings\", \"Navigation\", \"Add Toll/HOV Passes\", then add the pass. If you do not see the pass, please tap \"Show All Passes\". Thank you!",
 	"NotIdentified", // dBsooner 2018.02.22
-	
+
     "Tolls - No user transponder (avoid tolls)",
     //"Volunteer responding - Waze is about getting you to your destination the fastest; however, it does not know if you have a toll transponder. Therefore, if you prefer to not have toll routes suggested, there is a feature under Settings > Navigation to avoid toll roads. Thanks!", //rickzabel Pesach 12/22/14
     //"Volunteer responding - Waze is about getting you to your destination via the fastest route. However, it does not know if you have a toll transponder. Therefore, if you prefer to not have toll routes suggested, there is a feature under Settings > Navigation to avoid toll roads. Thanks!", //rz 2/26/15 //karlcr9911 4/4/15
@@ -573,7 +571,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "Turn Restrictions - Already included",
     "This restriction is already included in the map, Waze should not route through this illegal turn. If Waze ever gives you a route through a restricted turn, please send another Map Issue report at that time. Thanks!",
-    "NotIdentified",  //rickzabel Pesach 12/27/14
+    "NotIdentified", //rickzabel Pesach 12/27/14
 
     "Turn Restrictions - Double Yellow",
     "Volunteer responding, It is legal to make a left turn across one double yellow line. \nTwo double yellow lines, spaced apart 2 feet or more, are considered a barrier. It is illegal to cross. Thanks!", //rz 2/26/15 //karlcr9911 4/4/15
@@ -584,7 +582,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "NotIdentified",
 
     "Turn Restrictions - Valid Left turns",
-    //"Volunteer responding - If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, you wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //rz 2/26/15 
+    //"Volunteer responding - If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, you wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //rz 2/26/15
     "Volunteer responding - If you wait and complete the left turn, it may actually be faster than the alternative. If it’s not faster, your wait time will contribute to Waze’s database, thus helping to discourage the routing server from suggesting left turns at that intersection. We also suggest if you do not feel comfortable making such left turns, you can always go another route and let Waze recalculate.", //karlcr9911 4/4/15 //rickzabel 4/5/15
     "NotIdentified",
 
@@ -597,7 +595,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "",
     "Open",
 
-   "Camera report",
+    "Camera report",
     //"Thanks for the report. To ensure proper placement, Cameras must be reported in the app.  REPORT > CAMERA (may have to scroll down for it) > SPEED/Red LIGHT > Submit”, //subs5 4/17/2015
     //"Thanks for the report. To ensure proper placement, Cameras must be reported in the app. REPORT > (scroll to) CAMERA > SPEED / Red LIGHT / Fake  > Send”, //GizmoGuy411 2015-04-17
     "Volunteer responding, cameras must be reported from the app at / near the actual location using the Report > Camera option. Thank you!", //karlcr9911 rickzabel 4/17/2015
@@ -799,7 +797,7 @@ window.UrcommentsUSA_SouthCentralArray2 = [
     "NotIdentified",
 
     "GPS - Civilian Ambiguity",
-    "Civilian GPS has a designed in ambiguity of ~50 feet. Waze guesses your location, based on the instructions it has given you. \nIf it told you to take a turn, it assumes you took the turn, and directs you accordingly. \nWhen you get about half a block 'off course', then it recalculates. \nIt may sometimes direct you off of a route that seems best to you, based on traffic reports. \nIf you have more problems, please give us the details of where you were going. \nWaze does not give us that information. Closing report due to lack of response.", 
+    "Civilian GPS has a designed in ambiguity of ~50 feet. Waze guesses your location, based on the instructions it has given you. \nIf it told you to take a turn, it assumes you took the turn, and directs you accordingly. \nWhen you get about half a block 'off course', then it recalculates. \nIt may sometimes direct you off of a route that seems best to you, based on traffic reports. \nIf you have more problems, please give us the details of where you were going. \nWaze does not give us that information. Closing report due to lack of response.",
     "NotIdentified",
 
     "Not a map problem",
@@ -817,9 +815,9 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 
     "Signal Avoidance Bug",
     //"I do not see any issues with the current turn restrictions in the area. This appears to be part of the known signal avoidance bug. Waze's developers are working on a fix for the issue but currently we do not have an ETA. Please feel free to take the turn until the issue is resolved. Thanks!",  // remove - rickzabel 12/7/2014  // added - rickzabel 12/7/2014
-    //"There are no issues with the intersection’s turn restrictions. Waze's developers are working on a fix for this issue but we do not have an ETA. Please feel free use the signaled turn until the issue is resolved. Thanks!", // t0cableguy 12/7/14 
+    //"There are no issues with the intersection’s turn restrictions. Waze's developers are working on a fix for this issue but we do not have an ETA. Please feel free use the signaled turn until the issue is resolved. Thanks!", // t0cableguy 12/7/14
     //"There are no issues with the intersection’s turn restrictions. Waze's developers are working on a fix for this issue but we do not have an ETA. Please feel free to use the turn until the issue is resolved. Thanks!", // rickzabel 12/9/14
-    "There are no issues with the intersection’s turn restrictions. Waze's developers are working on a fix for this issue. We do not have an ETA. Please feel free to use the turn until the issue is resolved. Thanks!",  //GizmoGuy, t0cableguy, rickzabel 1/14/2015
+    "There are no issues with the intersection’s turn restrictions. Waze's developers are working on a fix for this issue. We do not have an ETA. Please feel free to use the turn until the issue is resolved. Thanks!", //GizmoGuy, t0cableguy, rickzabel 1/14/2015
     "NotIdentified",
 
     "Water Layer Edits",
