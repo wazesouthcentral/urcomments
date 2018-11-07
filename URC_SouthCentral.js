@@ -4,7 +4,7 @@
 // @namespace       https://greasyfork.org/en/scripts/31177-wme-urcomments-usa-southcentral
 // @grant           none
 // @grant           GM_info
-// @version         2018.11.06.02
+// @version         2018.11.06.03
 // @match           https://editor-beta.waze.com/*editor*
 // @match           https://beta.waze.com/*editor*
 // @match           https://www.waze.com/*editor*
@@ -25,6 +25,7 @@
  * 2018.08.15.01 - Changed match statements to match the parent script -tt
  * 2018.11.06.01 - Fixed index for default reminder position. Added Manual Tile Refresh. Revised Add Toll Pass to App. - dB
  * 2018.11.06.02 - Didn't escape quotations. My fault. :( - dB
+ * 2018.11.06.03 - Updated Add Toll Pass to App verbage per karlcr9911's recommendations. Removed "Tolls - No User Transponder". Updated "Tolls - No User Transponder (avoid tolls)" to just be "Tolls - Avoid Tolls". - dB
  */
 
 var URCommentUSA_SouthCentralVersion = GM_info.script.version;
@@ -534,19 +535,19 @@ window.UrcommentsUSA_SouthCentralArray2 = [
 	"Waze has a new feature for toll pass users. The toll road was recently updated on the Waze map so that it requires an electronic toll tag. If you have a toll pass subscription, please add it to your settings so the app can use the roads that require a pass. To do this, please open \"Settings\", \"Navigation\", \"Add Toll/HOV Passes\", then add the pass. If you do not see the pass, please tap \"Show All Passes\". Thank you!",
 	"NotIdentified", // dBsooner 2018.02.22
 
-    "Tolls - No user transponder (avoid tolls)",
+    "Tolls - Avoid Tolls",
     //"Volunteer responding - Waze is about getting you to your destination the fastest; however, it does not know if you have a toll transponder. Therefore, if you prefer to not have toll routes suggested, there is a feature under Settings > Navigation to avoid toll roads. Thanks!", //rickzabel Pesach 12/22/14
     //"Volunteer responding - Waze is about getting you to your destination via the fastest route. However, it does not know if you have a toll transponder. Therefore, if you prefer to not have toll routes suggested, there is a feature under Settings > Navigation to avoid toll roads. Thanks!", //rz 2/26/15 //karlcr9911 4/4/15
     //"Volunteer responding - Waze is about getting you to your destination via the fastest route. However, it does not know if you have a toll transponder. To avoid tolls, there is an option under Settings > Navigation or after clicking GO tap Routes and select one without gold coins (iPhone) or toll (android). Thanks!", //a version of this was suggested by subs5 4/12/2015 //rickzabel 4/17/2015
     //"Volunteer responding -  While Waze attempts to route you to your destination efficiently, it does not know if you have a toll transponder. To avoid tolls, there is an option under Settings > Navigation or after clicking GO tap Routes and select one without gold coins (iPhone) or toll (android). Thanks!", //rickzabel 4/17/2015
-    "Volunteer responding -  While Waze attempts to route you to your destination efficiently, it does not know if you have a toll transponder. To avoid tolls, there is an option under Settings > Navigation or after clicking GO tap Routes and select one without the toll icon. Thanks!", //rickzabel 11/24/2016
+    "Volunteer responding -  Waze attempts to route you to your destination efficiently. To avoid tolls, there is an option under Settings > Navigation or after clicking GO tap Routes and select one without the toll icon. Thanks!", //rickzabel 11/24/2016
     "NotIdentified",
 
-    "Tolls - No user transponder",
+    //"Tolls - No user transponder", // Removed 2018.11.06.03 due to "Add Toll Pass to App" works.
     //"Volunteer responding - Waze is about getting to your destination the fastest; however, it does not know if you have a toll transponder. As you travel, please feel welcome to report any map issues you encounter. Thanks!",//rickzabel Pesach 12/22/14
     //"Volunteer responding - Waze is about getting to your destination via the fastest route. However, it does not know if you have a toll transponder. As you travel, please feel welcome to report any map issues you encounter. Thanks!", //rickzabel 2/26/15 //t0cableguy 4/5/2015
-    "Volunteer responding - While Waze attempts to route you to your destination efficiently, it does not know if you have a toll transponder.  We are very sorry to say that the volunteer map editors cannot be much help here. As you travel, please feel welcome to report any map issues you encounter. Thanks!", //rickzabel karlcr9911 4/18/2015
-    "NotIdentified",
+    //"Volunteer responding - While Waze attempts to route you to your destination efficiently, it does not know if you have a toll transponder.  We are very sorry to say that the volunteer map editors cannot be much help here. As you travel, please feel welcome to report any map issues you encounter. Thanks!", //rickzabel karlcr9911 4/18/2015
+    //"NotIdentified",
 
     "Tolls - Not Avoiding",
     "Volunteer responding.  Waze won't take a 'long' detour to avoid a toll. which could be what happened to you. \nFor some more info see https://www.waze.com/forum/viewtopic.php?f=6&t=71405 \nIf this is a route you take often, you could select a segment on the road you want to route over to avoid the toll and add it as a favorite ( http://wiki.waze.com/wiki/Manage_Favorites ), then add it as a stop when you are navigating ( http://wiki.waze.com/wiki/How_to_Naviga ... stop_point ). \nThis will force a detour to your stop point and bypass the toll road.",
